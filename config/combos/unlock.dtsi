@@ -1,4 +1,12 @@
-combo_unlock {
-  key-positions = <0 4>;              // / B (Colemak) / B Z (Graphite)
-  bindings = <&studio_unlock>;
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    combos {
+        combo_unlock {
+            key-positions = <0 4>;              // / B (Colemak) / B Z (Graphite)
+            bindings = <&studio_unlock>;
+        };
+    };
 };
+

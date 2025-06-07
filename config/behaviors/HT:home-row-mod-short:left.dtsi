@@ -1,13 +1,33 @@
-// Left hand home row mods (shorter idle time for numbers)
-hml_s: homerow_mods_left_short {
-  compatible = "zmk,behavior-hold-tap";
-  label = "HOMEROW_MODS_LEFT_SHORT";
-  bindings = <&kp>, <&kp>;
-  #binding-cells = <2>;
-  flavor = "balanced";
-  tapping-term-ms = <280>;
-  require-prior-idle-ms = <0>;
-  quick-tap-ms = <150>;
-  hold-trigger-on-release;
-  hold-trigger-key-positions = <KEYS_R THUMBS>;
+#ifndef HT_HOME_ROW_MOD_SHORT_LEFT_DTSI
+#define HT_HOME_ROW_MOD_SHORT_LEFT_DTSI
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+// Key position groups for home row mods
+#define KEYS_R 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29
+
+#ifdef IS_CHARYBDIS
+    #define THUMBS 30 31 32 33 34 35
+#else
+    #define THUMBS 30 31 32 33 34 35 36
+#endif
+
+/ {
+    behaviors {
+        hml_s: homerow_mods_left_short {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_LEFT_SHORT";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            require-prior-idle-ms = <0>;
+            quick-tap-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+        };
+    };
 };
+
+#endif

@@ -1,4 +1,12 @@
-combo_esc {
-  key-positions = <1 2>;              // W F (Colemak) / L D (Graphite)
-  bindings = <&kp ESCAPE>;
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    combos {
+        combo_esc {
+            key-positions = <1 2>;              // W F (Colemak) / L D (Graphite)
+            bindings = <&kp ESCAPE>;
+        };
+    };
 };
+

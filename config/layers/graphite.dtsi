@@ -1,14 +1,28 @@
-// Graphite layer (1) - Alternative layout with optimized letter placement
-Graphite {
-  display-name = "Graphite";
-  bindings = <
-    &kp B       &kp L       &kp D        &kp W        &kp Z                   &kp APOS             &kp F                      &kp O        &kp U       &kp J
-    &hml LGUI N &hml LALT R &hml LSHFT T &hml LCTRL S &kp G                   &kp Y                &hmr RCTRL H               &hmr RSHFT A &hmr RALT E &hmr RIGHT_GUI I
-    &kp Q       &kp X       &kp M        &kp C        &kp V                   &kp K                &kp P                      &kp COMMA    &kp DOT     &kp SEMI
-                            &mkp LCLK    &smart_shift &lt SYMBOL SPACE        &lt NUMBER BACKSPACE &mt LS(LC(LEFT_ALT)) ENTER
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include "../behaviors/HT:home-row-mod:left.dtsi"
+#include "../behaviors/HT:home-row-mod:right.dtsi"
+#include "../behaviors/MM:smart-shift.dtsi"
 
-                                                                  #ifndef IS_CHARYBDIS
-                                                                       &mkp RCLK
-                                                                  #endif
-  >;
+// Layer definitions
+#define SYMBOL 2
+#define NUMBER 3
+
+/ {
+    keymap {
+        // Graphite layer (1) - Alternative layout with optimized letter placement
+        Graphite {
+          display-name = "Graphite";
+          bindings = <
+            &kp B       &kp L       &kp D        &kp W        &kp Z                   &kp APOS             &kp F                      &kp O        &kp U       &kp J
+            &hml LGUI N &hml LALT R &hml LSHFT T &hml LCTRL S &kp G                   &kp Y                &hmr RCTRL H               &hmr RSHFT A &hmr RALT E &hmr RIGHT_GUI I
+            &kp Q       &kp X       &kp M        &kp C        &kp V                   &kp K                &kp P                      &kp COMMA    &kp DOT     &kp SEMI
+                                    &mkp LCLK    &smart_shift &lt SYMBOL SPACE        &lt NUMBER BACKSPACE &mt LS(LC(LEFT_ALT)) ENTER
+        
+                                                                          #ifndef IS_CHARYBDIS
+                                                                               &mkp RCLK
+                                                                          #endif
+          >;
+        };
+    };
 };

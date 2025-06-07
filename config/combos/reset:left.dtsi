@@ -1,4 +1,12 @@
-combo_reset_left {
-  key-positions = <20 24>;            // Z V (Colemak) / Q V (Graphite)
-  bindings = <&sys_reset>;
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    combos {
+        combo_reset_left {
+            key-positions = <20 24>;            // Z V (Colemak) / Q V (Graphite)
+            bindings = <&sys_reset>;
+        };
+    };
 };
+

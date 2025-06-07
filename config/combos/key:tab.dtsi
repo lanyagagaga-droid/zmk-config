@@ -1,4 +1,12 @@
-combo_tab {
-  key-positions = <2 3>;              // F P (Colemak) / D W (Graphite)
-  bindings = <&kp TAB>;
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    combos {
+        combo_tab {
+            key-positions = <2 3>;              // F P (Colemak) / D W (Graphite)
+            bindings = <&kp TAB>;
+        };
+    };
 };
+

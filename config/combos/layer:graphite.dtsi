@@ -1,4 +1,15 @@
-combo_graphite {
-  key-positions = <6 7>;              // L U (Colemak) / F O (Graphite)
-  bindings = <&to GRAPHITE>;
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define GRAPHITE 1
+
+/ {
+    combos {
+
+        combo_graphite {
+            key-positions = <6 7>;              // L U (Colemak) / F O (Graphite)
+            bindings = <&to GRAPHITE>;
+        };
+    };
 };
+

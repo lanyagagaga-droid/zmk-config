@@ -1,4 +1,13 @@
-combo_ctrl_del {
-  key-positions = <11 12>;            // R S (Colemak) / R T (Graphite)
-  bindings = <&kp LC(BACKSPACE)>;
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    combos {
+
+        combo_ctrl_del {
+            key-positions = <11 12>;            // R S (Colemak) / R T (Graphite)
+            bindings = <&kp LC(BACKSPACE)>;
+        };
+    };
 };
+

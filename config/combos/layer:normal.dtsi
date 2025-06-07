@@ -1,4 +1,15 @@
-combo_normal {
-  key-positions = <7 8>;              // U Y (Colemak) / O U (Graphite)
-  bindings = <&to BASE>;
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+// Layer definitions
+#define BASE 0
+
+/ {
+    combos {
+        combo_normal {
+            key-positions = <7 8>;              // U Y (Colemak) / O U (Graphite)
+            bindings = <&to BASE>;
+        };
+    };
 };
+

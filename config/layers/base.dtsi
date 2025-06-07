@@ -1,14 +1,33 @@
-// Base layer (0) - Base typing layer with Colemak-DH layout
-Base {
-  display-name = "Base";
-  bindings = <
-    &kp FSLH    &kp W       &kp F        &kp P        &kp B                   &mt_wheel SCRL_UP J   &mt_wheel SCRL_LEFT L      &mt_mouse MOVE_UP U &mt_wheel SCRL_RIGHT Y &kp SEMI
-    &hml LGUI A &hml LALT R &hml LSHFT S &hml LCTRL T &kp G                   &mt_wheel SCRL_DOWN M &hmr_cml 0 N               &hmr_smd 0 E        &hmr_amr 0 I           &hmr RIGHT_GUI O
-    &kp Z       &kp X       &kp C        &kp D        &kp V                   &kp K                 &kp H                      &kp COMMA           &kp DOT                &kp Q
-                            &mkp LCLK    &smart_shift &lt SYMBOL SPACE        &lt NUMBER BACKSPACE  &mt LS(LC(LEFT_ALT)) ENTER
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include "../behaviors/HT:home-row-mod:left.dtsi"
+#include "../behaviors/HT:home-row-mod:right.dtsi"
+#include "../behaviors/HT:home-row-macro:pointer-left-ctrl.dtsi"
+#include "../behaviors/HT:home-row-macro:pointer-down-shift.dtsi"
+#include "../behaviors/HT:home-row-macro:pointer-right-alt.dtsi"
+#include "../behaviors/MM:smart-shift.dtsi"
+#include "../behaviors/HT:scroll.dtsi"
+#include "../behaviors/HT:pointer.dtsi"
 
-                                                                  #ifndef IS_CHARYBDIS
-                                                                       &mkp RCLK
-                                                                  #endif
->;
+// Layer definitions
+#define SYMBOL 2
+#define NUMBER 3
+
+/ {
+  keymap {
+    // Base layer (0) - Base typing layer with Colemak-DH layout
+    Base {
+      display-name = "Base";
+      bindings = <&kp FSLH &kp W &kp F &kp P &kp B &mt_wheel SCRL_UP J &mt_wheel SCRL_LEFT L &mt_mouse MOVE_UP U &mt_wheel SCRL_RIGHT Y &kp SEMI
+                  &hml LGUI A &hml LALT R &hml LSHFT S &hml LCTRL T &kp G &mt_wheel SCRL_DOWN M &hmr_cml 0 N &hmr_smd 0 E &hmr_amr 0 I &hmr RIGHT_GUI O
+                  &kp Z &kp X &kp C &kp D &kp V &kp K &kp H &kp COMMA &kp DOT &kp Q
+                  &mkp LCLK &smart_shift &lt SYMBOL SPACE &lt NUMBER BACKSPACE &mt LS(LC(LEFT_ALT)) ENTER
+        
+                                                                          #ifndef IS_CHARYBDIS
+                  &mkp RCLK
+                                                                          #endif
+      >;
+    };
+  };
 };

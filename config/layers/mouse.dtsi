@@ -1,13 +1,25 @@
-Mouse {
-  display-name = "Mouse";
-  bindings = <
-    &trans   &trans   &trans     &trans     &trans          &trans &trans   &trans   &trans   &trans
-    &kp LGUI &kp LALT &kp LSHFT  &kp LCTRL  &trans          &trans &mkp MB1 &mkp MB2 &mkp MB3 &trans 
-    &trans   &trans   &mo NUMBER &mo SYMBOL &trans          &trans &trans   &trans   &trans   &to SYMBOL
-                      &mkp MB1   &mkp MB2   &mkp MB3        &trans &none
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
-                                                #ifndef IS_CHARYBDIS
-                                                     &none
-                                                #endif
-  >;
+
+#define SYMBOL 2
+#define NUMBER 3
+
+/ {
+    keymap {
+        Mouse {
+          display-name = "Mouse";
+          bindings = <
+            &trans   &trans   &trans     &trans     &trans          &trans &trans   &trans   &trans   &trans
+            &kp LGUI &kp LALT &kp LSHFT  &kp LCTRL  &trans          &trans &mkp MB1 &mkp MB2 &mkp MB3 &trans 
+            &trans   &trans   &mo NUMBER &mo SYMBOL &trans          &trans &trans   &trans   &trans   &to SYMBOL
+                              &mkp MB1   &mkp MB2   &mkp MB3        &trans &none
+        
+                                                        #ifndef IS_CHARYBDIS
+                                                             &none
+                                                        #endif
+          >;
+        };
+    };
 };

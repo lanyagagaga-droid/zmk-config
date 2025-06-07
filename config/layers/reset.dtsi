@@ -1,13 +1,20 @@
-Reset {
-  display-name = "Reset";
-  bindings = <
-    &none &none &none &none &none              &none &none &none &none &none     
-    &none &none &none &none &none              &none &none &none &none &none    
-    &none &none &none &none &none              &none &none &none &none &none
-                &none &none &bootloader        &bootloader &none               
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 
-                                    #ifndef IS_CHARYBDIS
-                                         &none
-                                    #endif
-  >;
+/ {
+    keymap {
+        Reset {
+          display-name = "Reset";
+          bindings = <
+            &none &none &none &none &none              &none &none &none &none &none     
+            &none &none &none &none &none              &none &none &none &none &none    
+            &none &none &none &none &none              &none &none &none &none &none
+                        &none &none &bootloader        &bootloader &none               
+        
+                                            #ifndef IS_CHARYBDIS
+                                                 &none
+                                            #endif
+          >;
+        };
+    };
 };

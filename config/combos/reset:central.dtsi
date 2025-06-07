@@ -1,5 +1,13 @@
-combo_reset_central {
-  key-positions = <32 33>;
-  bindings = <&bootloader>;
-  require-prior-idle-ms = <2000>;
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    combos {
+        combo_reset_central {
+            key-positions = <32 33>;
+            bindings = <&bootloader>;
+            require-prior-idle-ms = <2000>;
+        };
+    };
 };
+

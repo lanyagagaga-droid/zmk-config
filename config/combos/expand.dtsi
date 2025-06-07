@@ -1,4 +1,13 @@
-combo_exp {
-  key-positions = <21 22>;
-  bindings = <&te>;
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include "../behaviors/TE:text-expander.dtsi"
+
+/ {
+  combos {
+    combo_exp {
+      key-positions = <21 22>;
+      bindings = <&te>;
+    };
+  };
 };
+

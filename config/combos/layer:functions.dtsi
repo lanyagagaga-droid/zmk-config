@@ -1,4 +1,13 @@
-combo_function {
-  key-positions = <27 28>;            // , .
-  bindings = <&sl FUNCTION>;
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define FUNCTION 4
+
+/ {
+    combos {
+        combo_function {
+            key-positions = <27 28>;            // , .
+            bindings = <&sl FUNCTION>;
+        };
+    };
 };
