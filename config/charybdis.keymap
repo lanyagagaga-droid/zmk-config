@@ -1,4 +1,4 @@
-#include "behaviors/globals.dtsi"
+
 
 // Behaviors
 // Behaviors are now included in their respective layer files
@@ -23,6 +23,7 @@
 #include "layers/functions.dtsi"
 #include "layers/game.dtsi"
 #include "layers/reset.dtsi"
+#include "behaviors/globals.dtsi"
 
 / {
   chosen {
