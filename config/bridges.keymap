@@ -1,0 +1,35 @@
+
+// Behaviors
+// Behaviors are now included in their respective layer files
+
+// Combos
+#include "combos/reset:left.dtsi"
+#include "combos/reset:right.dtsi"
+#include "combos/reset:central.dtsi"
+#include "combos/layer:normal.dtsi"
+#include "combos/layer:functions.dtsi"
+#include "combos/layer:game.dtsi"
+#include "combos/modded-key:ctrl-delete.dtsi"
+#include "combos/key:escape.dtsi"
+#include "combos/key:tab.dtsi"
+#include "combos/unlock.dtsi"
+
+// Layers
+#include "layers/base:charybdis.dtsi"
+#include "layers/mouse.dtsi"
+#include "layers/symbols.dtsi"
+#include "layers/numbers.dtsi"
+#include "layers/functions.dtsi"
+#include "layers/game.dtsi"
+#include "layers/reset.dtsi"
+#include "behaviors/globals.dtsi"
+
+/ {
+  chosen {
+    zmk,physical-layout = &gggw_bridges_36_layout;
+  };
+
+  keymap {
+    compatible = "zmk,keymap";
+  };
+};

@@ -1,0 +1,13 @@
+file_format: "1"
+id: bridges
+name: Bridges
+type: shield
+url: https://github.com/Good-Great-Grand-Wonderful/bridges
+requires: [pro_micro]
+features:
+  - keys
+  - pointer
+siblings:
+  - bridges_left
+  - bridges_right
+  - bridges_dongle

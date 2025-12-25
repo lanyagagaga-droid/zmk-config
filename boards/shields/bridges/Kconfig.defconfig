@@ -1,0 +1,24 @@
+# Copyright (c) 2025 Vincent Franco
+# SPDX-License-Identifier: MIT
+
+if SHIELD_BRIDGES_DONGLE
+
+config ZMK_KEYBOARD_NAME
+	default "Bridges"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_BRIDGES_DONGLE || SHIELD_BRIDGES_LEFT || SHIELD_BRIDGES_RIGHT
+
+config ZMK_SPLIT
+	default y
+
+endif
+
+config IS_BRIDGES
+  bool
+  default y
+

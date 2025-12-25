@@ -1,0 +1,22 @@
+#include "bridges.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+    };
+
+    mock_kscan: kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};
+
+&trackball_left_listener {
+    status = "okay";
+};
+
+&trackball_right_listener {
+    status = "okay";
+};
